@@ -17,10 +17,10 @@ Steps to replicate the issue using the MCVE:
 4. Notice that the XCode logs show an error "deep link does not contain valid params", and there is no "Dynamic Link Received" message or updated text
 
 Complete stack trace and logs from iOS self-diagnostic tool:
-- The iOS self-diagnostic tool requires Swift or Objective-C, but I am using the Unity C# SDK
+- The iOS self-diagnostic tool requires Swift or Objective-C, but I am using the Unity C# SDK. How can I call the iOS self-diagnostic tool from the Unity C# SDK?
 
 Video reproducing the issue (so I could have a clearer view of the exact behavior you're encountering):
-- TBD
+- To be added
 
 Video reproducing the issue using our quickstart app (for verification):
 - N / A
