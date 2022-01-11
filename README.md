@@ -20,7 +20,7 @@ Complete stack trace and logs from iOS self-diagnostic tool:
 - The iOS self-diagnostic tool requires Swift or Objective-C, but I am using the Unity C# SDK. How can I call the iOS self-diagnostic tool from the Unity C# SDK?
 
 Video reproducing the issue (so I could have a clearer view of the exact behavior you're encountering):
-- To be added
+- https://user-images.githubusercontent.com/1088474/148912056-c5553b12-09ec-442d-bfdd-d9b9e38d47dd.mp4
 
 Video reproducing the issue using our quickstart app (for verification):
 - N / A
