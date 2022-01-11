@@ -11,7 +11,7 @@ Confirmation if the issue persists after updating to the latest SDK available:
 - https://github.com/davidmfinol/fdl-mcve
 
 Steps to replicate the issue using the MCVE:
-1. Open the Unity Project `Card-Game-Simulator` with Unity 2020.3.25f1 iOS
+1. Open the `Card-Game-Simulator` project
 2. Build and run to an iOS device
 3. Click the short link on the iOS device: [https://cgs.link/zu_tiles_hime](https://cgs.link/zu_tiles_hime)
 4. Notice that the XCode logs show an error "deep link does not contain valid params", and there is no "Dynamic Link Received" message or updated text
