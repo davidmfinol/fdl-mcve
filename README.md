@@ -4,7 +4,6 @@ Firebase Dynamic Links Case 10161897: iOS Error says deep link does not contain 
 Screenshots of your Dynamic Link config in the console (if link is created via console):
 ![image](https://user-images.githubusercontent.com/1088474/148890253-f528e067-f627-45b6-ae0b-32d3a1ac5b22.png)
 
-
 Confirmation if the issue persists after updating to the latest SDK available:
 - Yes, I confirm that the issue persists even with the latest SDK available, v8.7.0
 
@@ -15,6 +14,7 @@ Steps to replicate the issue using the MCVE:
 1. Open the Unity Project `Card-Game-Simulator` with Unity 2020.3.25f1 iOS
 2. Build and run to an iOS device
 3. Click the short link on the iOS device: [https://cgs.link/zu_tiles_hime](https://cgs.link/zu_tiles_hime)
+4. Notice that the XCode logs show an error "deep link does not contain valid params", and there is no "Dynamic Link Received" message or updated text
 
 Complete stack trace and logs from iOS self-diagnostic tool:
 - The iOS self-diagnostic tool requires Swift or Objective-C, but I am using the Unity C# SDK
