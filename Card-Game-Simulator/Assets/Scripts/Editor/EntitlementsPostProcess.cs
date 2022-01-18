@@ -46,6 +46,15 @@ using System.IO;
             pbxProject.AddFile(targetName + "/" + fileName, fileName);
             pbxProject.AddBuildProperty(targetGuid, "CODE_SIGN_ENTITLEMENTS", targetName + "/" + fileName);
             pbxProject.WriteToFile(pbxProjectPath);
+
+            string plistPath = buildPath + "/Info.plist";
+            PlistDocument plist = new PlistDocument();
+            plist.ReadFromString(File.ReadAllText(plistPath));
+            PlistElementDict rootDict = plist.root;
+            rootDict.SetBoolean("FirebaseAppDelegateProxyEnabled", false);
+            PlistElementArray customDomains = rootDict.CreateArray("FirebaseDynamicLinksCustomDomains");
+            customDomains.AddString("https://cgs.link");
+            File.WriteAllText(plistPath, plist.WriteToString());
 #endif
         }
     }
