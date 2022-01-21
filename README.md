@@ -1,7 +1,7 @@
 # fdl-mcve
 Firebase Dynamic Links Case 10161897: iOS Error says deep link does not contain valid params
 
-Screenshots of your Dynamic Link config in the console (if link is created via console):
+Screenshots of your Dynamic Link config in the console:
 ![image](https://user-images.githubusercontent.com/1088474/148890253-f528e067-f627-45b6-ae0b-32d3a1ac5b22.png)
 
 Confirmation if the issue persists after updating to the latest SDK available:
@@ -11,19 +11,23 @@ Confirmation if the issue persists after updating to the latest SDK available:
 - https://github.com/davidmfinol/fdl-mcve
 
 Steps to replicate the issue using the MCVE:
+
+BEFORE `FirebaseDynamicLinksCustomDomains`:
 1. Open the `Card-Game-Simulator` project
 2. Build and run to an iOS device
 3. Click the short link on the iOS device: [https://cgs.link/zu_tiles_hime](https://cgs.link/zu_tiles_hime)
 4. Notice that the XCode logs show an error "deep link does not contain valid params", and there is no "Dynamic Link Received" message or updated text
 
+AFTER `FirebaseDynamicLinksCustomDomains`:
+1. Not reproducible with mcve; only reproducible by taking a build that successfully works with the BEFORE steps, and then doing through the app store.
+
 Complete stack trace and logs from iOS self-diagnostic tool:
 - The iOS self-diagnostic tool requires Swift or Objective-C, but I am using the Unity C# SDK. How can I call the iOS self-diagnostic tool from the Unity C# SDK?
 
-Video reproducing the issue (so I could have a clearer view of the exact behavior you're encountering):
-- https://user-images.githubusercontent.com/1088474/148912056-c5553b12-09ec-442d-bfdd-d9b9e38d47dd.mp4
-
-Video reproducing the issue using our quickstart app (for verification):
-- N / A
+Video reproducing the issue:
+- BEFORE `FirebaseDynamicLinksCustomDomains`, with mcve on Xcode: https://user-images.githubusercontent.com/1088474/148912056-c5553b12-09ec-442d-bfdd-d9b9e38d47dd.mp4
+- AFTER `FirebaseDynamicLinksCustomDomains`, with full app on XCode: https://user-images.githubusercontent.com/1088474/150435087-37cb2c0a-bf3b-4836-9ca3-7c32b5cc1480.mp4
+- AFTER `FirebaseDynamicLinksCustomDomains`, with full app on App Store: https://user-images.githubusercontent.com/1088474/150435701-8996a726-78bd-4516-b284-b2f61e822a5e.mp4
 
 Confirmation if there are no longer any errors found upon checking the affected link's debug page:
 - Yes, I confirm there are no errors on the link's debug page: https://cgs.link/zu_tiles_hime?d=1
